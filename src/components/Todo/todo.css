@@ -1,0 +1,48 @@
+.completed {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+.todo {
+    margin: 1rem;
+    padding: 0.25rem 1rem 0.25rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 4px auto; */
+    color: #fff;
+    background: linear-gradient(
+        90deg,
+        rgba(20, 159, 255, 1) 0%,
+        rgb(5, 91, 204) 100%
+    );
+    border-radius: 5px;
+}
+ul,
+li {
+    list-style: none;
+}
+.edit-btn {
+    background: linear-gradient(
+        90deg,
+        rgba(93, 12, 255, 1) 0%,
+        rgba(155, 0, 250, 1) 100%
+    );
+    padding: 10px 16px;
+    outline: none;
+    border: none;
+    border-radius: 5%;
+    color: #fff;
+}
+.done-btn {
+    margin: 1px;
+    background: linear-gradient(
+        90deg,
+        rgb(255, 67, 20) 0%,
+        rgb(238, 7, 7) 100%
+    );
+    padding: 10px 16px;
+    outline: none;
+    border: none;
+    border-radius: 5%;
+    color: #fff;
+}
