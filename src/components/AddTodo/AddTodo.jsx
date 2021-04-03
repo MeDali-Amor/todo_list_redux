@@ -1,43 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { addTodo } from "../../Actions/";
-import { editTodo } from "../../Actions/";
-import { useSelector } from "react-redux";
-import { achievedTodos } from "../../Actions/";
-import { unachievedTodos } from "../../Actions/";
 import { useDispatch } from "react-redux";
+import "./AddTodo.css";
+
 const AddTodo = ({ setComplete }) => {
-    const savedTodo = useSelector((state) => state.taskReducer);
-    // console.log(savedTodo);
+    // States
     const dispatch = useDispatch();
     const [newTodo, setNewTodo] = useState("");
-    // const [complete, setComplete] = useState("all");
+    // Functions
     const handleInput = (e) => {
         setNewTodo(e.target.value);
     };
 
     const handleSubmit = (e) => {
-        if (savedTodo !== {}) {
-            // dispatch(editTodo)(newTodo);
-            // } else {
-            e.preventDefault();
-            if (newTodo) {
-                setNewTodo("");
-                dispatch(addTodo(newTodo));
-            }
-        } else dispatch(editTodo)(savedTodo);
+        e.preventDefault();
+        if (newTodo) {
+            setNewTodo("");
+            dispatch(addTodo(newTodo));
+        }
     };
-
-    // const add = (e, newTodo) => {
-    //     e.preventDefault();
-    //     if (newTodo) {
-    //         setNewTodo("");
-    //         dispatch(addTodo(newTodo));
-    //     }
-    // };
-
-    useEffect(() => {
-        setNewTodo(savedTodo.text);
-    }, [savedTodo]);
 
     return (
         <div className="todo-from">

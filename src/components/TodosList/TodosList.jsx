@@ -3,11 +3,15 @@ import { useSelector } from "react-redux";
 import Todo from "../Todo/Todo";
 
 const TodosList = ({ complete }) => {
+    //States
     const todos = useSelector((state) => state.todosReducer.todos);
     const [filteredTodos, setFilteredTodos] = useState([]);
+    // Functions
+
     useEffect(() => {
         filterTodos();
     }, [todos, complete]);
+
     const filterTodos = () => {
         switch (complete) {
             case "achieved":

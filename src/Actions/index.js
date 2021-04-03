@@ -21,13 +21,6 @@ export const editTodo = (payload) => {
     };
 };
 
-export const saveTodo = (payload) => {
-    return {
-        type: "SAVE_TODO",
-        payload: payload,
-    };
-};
-
 // export const achievedTodos = (payload) => {
 //     return {
 //         type: "ACHIEVED_TODOS,",
